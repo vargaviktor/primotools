@@ -72,3 +72,6 @@ checksum. If there is two version of a program and they have different size and 
 binary equal, these differences can come from the different block sizes. If the RAW CRC is equal,
 the programs are equal.
 
+Thanks
+------
+based on code of Laszlo Jozsef
