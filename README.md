@@ -4,7 +4,7 @@ Mikrokey Primo tape image converters (between ptp and pri, and a checksummer)
 To learn about the Mikrokey Primo computer check the http://primo.homeserver.hu/ page.
 
 Compile:
-- with FreePascal
+- with FreePascal https://www.freepascal.org/
 
 
 Pri2PTP
