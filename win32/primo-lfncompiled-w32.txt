@@ -1,0 +1,4 @@
+compiled with FreePascal, Win32 mode, so only run under Win32
+Crcprimo
+Pri2ptp
+Ptp2pri

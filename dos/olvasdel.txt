@@ -1,0 +1,62 @@
+Pri2PTP, PTP2Pri, CRCPrimo -  1.0 verzió
+
+Ezek a programok freeware programok, és a forrásuk is szabadon módosítható.
+
+Pri2PTP
+-------
+Pri fájl (.PRG) .PTP fájlformátumba konvertálása
+
+Használat:
+
+pri2ptp inputfile outputfile [-n]
+
+       	 inputfile: PRI (.PRG) fájl
+ 	outputfile: PTP fájl (létezõ vagy új Primo magnófájl
+	        -n: ha ez a kapcsoló meg van adva, akkor a program megkérdezi a PTP fájlban tárolandó fájlnevet.
+                    ha nincs megadva, akkor a ptp fájlban eltárolt fájlnév a "pri2ptp conv." lesz.
+
+Egy PTPfájltöbb magnóállományt is tartalmazhat, ezért lehetséges hogy meglévõ PTP fájlhoz a frissen konvertált 
+állományt. Tehát ha már létezõ állomány nevét adjuk meg, akkor a konvertált fájl annak végére kerül.
+
+(A program RAW CRC-t generál, ami az összege az összes ADATBÁJTnak, ehhez nincs hozzáadva a semmilyen fejléc 
+jellegû információ. Ha egy program kéát verziója különbözõ méretû és binárisan nem egyezik meg, az adódhat abból,
+hogy más blokkszerkezettel került tárolásra. Azonban ha a RAW CRC megegyezik, akkor a PRIMO fájlok binárisan 
+egyformák.)
+
+
+PTP2Pri
+-------
+PTP fájl konvertálása .Pri (.PRG) fájlokká..
+
+Használat: 
+
+ptp2pri inputfile
+   	
+	inputfile: PTP fájl
+
+Mivel a PTP fájl tartalmazza a benne tárolt Primo fájl nevét, a kimeneti fájl nevét az határozza meg.
+Ha a fájlnév nem használaható (létezik vagy érvénytelen DOS alatt) akkor rákérdez a fájlnévre.
+
+(A program RAW CRC-t generál, ami az összege az összes ADATBÁJTnak, ehhez nincs hozzáadva a semmilyen fejléc 
+jellegû információ. Ha egy program kéát verziója különbözõ méretû és binárisan nem egyezik meg, az adódhat abból,
+hogy más blokkszerkezettel került tárolásra. Azonban ha a RAW CRC megegyezik, akkor a PRIMO fájlok binárisan 
+egyformák.)
+
+CRCPrimo
+-------
+Ellenõrzi az adatblokokat, a belsõ PRIMO CRC-t és a RAW CRC-t.
+
+Használat: 
+crcprimo -s|-l inputfile [inputfile] [inputfile...]
+	 
+	 inputfiles - PRI (.PRG) vagy PTP fájlok
+ 	 -s: szükített információ mennyiség (név, raw CRC, indítási cím)
+	 -l: teljes információ a fájlokról, blokk információkkal
+
+A program ellenõrzi a megadott fájlokban a PRIMO CRC-t (csak PTP fájlban, a PRI fájl nem tartalmaz ilyet), a
+blokk strutktúrát és RAW CRC-t generál.
+
+A RAW CRC-t az összege az összes ADATBÁJTnak, ehhez nincs hozzáadva a semmilyen fejléc jellegû információ.
+Ha egy program kéát verziója különbözõ méretû és binárisan nem egyezik meg, az adódhat abból,
+hogy más blokkszerkezettel került tárolásra. Azonban ha a RAW CRC megegyezik, akkor a PRIMO fájlok binárisan 
+egyformák.
