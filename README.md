@@ -72,6 +72,29 @@ checksum. If there is two version of a program and they have different size and 
 binary equal, these differences can come from the different block sizes. If the RAW CRC is equal,
 the programs are equal.
 
+WAV2PTP
+-------
+Converts WAV file (8 bit mono SR=22050Hz) to PTP emulator file.
+
+Use:
+wav2ptp inputfile outputfile
+	 inputfile: WAV file (8 bit mono SR=22050Hz)
+        outputfile: PTP file (existing or new Primo Tape igamge file)
+	
+Example:
+wav2ptp primo1.wav out.ptp
+   
+PTP2WAV
+-------
+Converts PTP file (Primo emulator tape image) to WAV file
+
+Use:
+ptp2wav inputfile outputfile
+
+	 inputfile: PTP file				 
+        outputfile: WAV file to output
+
 Thanks
 ------
-based on code of Laszlo Jozsef
+PTP2WAV and WAV2PTP are made by Laszlo Jozsef
+others based on code of Laszlo Jozsef
