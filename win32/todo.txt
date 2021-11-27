@@ -1,0 +1,107 @@
+TODO:
+-----
+Crcprimo
+-Kevés fájlal használható (max 2 fájl egyszerre), 3-nál már -l esetén runtime error 216 van 
+-1-1 fájlnál tudja -l nél a blokkokat rendesen listázni
+-szöveg kimenet fájlba irányítása nem megy
+
+Pri2ptp
+-szöveg kimenet fájlba irányítása nem megy
+(az eltérések a file névből szoktak adódni az ptp2pri->pri2ptp sorozatos konvertáláskor, az nem hiba)
+
+Ptp2pri
+-szöveg kimenet fájlba irányítása nem megy
+-fura blokk számozás konvertáláskor
+
+ptp2wav,wav2ptp
+odakonv sikeres
+
+c:\Users\Viktor\DEV\primotools\win32>ptp2wav oszkar_a_lovag.ptp oszkar_alo.wav
+FILE write, size=17829
+  write "silence" field
+  write "filesync" field
+    write primo block #1, size=20
+    write primo block #2, size=40
+    write primo block #3, size=262
+    write primo block #4, size=262
+    write primo block #5, size=262
+    write primo block #6, size=262
+    write primo block #7, size=262
+    write primo block #8, size=262
+    write primo block #9, size=262
+    write primo block #10, size=262
+    write primo block #11, size=262
+    write primo block #12, size=262
+    write primo block #13, size=262
+    write primo block #14, size=262
+    write primo block #15, size=262
+    write primo block #16, size=262
+    write primo block #17, size=262
+    write primo block #18, size=262
+    write primo block #19, size=262
+    write primo block #20, size=262
+    write primo block #21, size=262
+    write primo block #22, size=262
+    write primo block #23, size=262
+    write primo block #24, size=262
+    write primo block #25, size=262
+    write primo block #26, size=262
+    write primo block #27, size=262
+    write primo block #28, size=262
+    write primo block #29, size=262
+    write primo block #30, size=262
+    write primo block #31, size=262
+    write primo block #32, size=262
+    write primo block #33, size=262
+    write primo block #34, size=262
+    write primo block #35, size=262
+    write primo block #36, size=262
+    write primo block #37, size=262
+    write primo block #38, size=262
+    write primo block #39, size=262
+    write primo block #40, size=262
+    write primo block #41, size=262
+    write primo block #42, size=262
+    write primo block #43, size=262
+    write primo block #44, size=262
+    write primo block #45, size=262
+    write primo block #46, size=262
+    write primo block #47, size=262
+    write primo block #48, size=262
+    write primo block #49, size=262
+    write primo block #50, size=262
+    write primo block #51, size=262
+    write primo block #52, size=262
+    write primo block #53, size=262
+    write primo block #54, size=262
+    write primo block #55, size=262
+    write primo block #56, size=262
+    write primo block #57, size=262
+    write primo block #58, size=262
+    write primo block #59, size=262
+    write primo block #60, size=262
+    write primo block #61, size=262
+    write primo block #62, size=262
+    write primo block #63, size=262
+    write primo block #64, size=262
+    write primo block #65, size=262
+    write primo block #66, size=262
+    write primo block #67, size=262
+    write primo block #68, size=262
+    write primo block #69, size=262
+    write primo block #70, size=5
+FILE write done. (70 blocks)
+  write "silence" field
+
+visszakonv sikertelen
+c:\Users\Viktor\DEV\primotools\win32>wav2ptp oszkar_22050.wav oszkarw.ptp
+WAVE file IDs found
+Sample frequency = 22050
+8 bit samples, good.
+DATA found, pos=78, length=6035245
+Press ENTER to parse the WAV or ESC to quit
+SearchFileSync ...OK
+ #00 OSZK]R A LOVAG   BASIC program
+ #01 Machine-code #02 Machine-code #03 Machine-code #04 Machine-code #05 Machine-code #06 Machine-code #07 Machine-code
+#08 Machine-code #09 Machine-code #10 Machine-code #11 Machine-code #12 Machine-code #13 Machine-code #14 Machine-code #
+15 Machine-code #16 Machine-code #17 Machine-code #18 Machine-codeBlockSync error! [255|255:1632970]. Abort

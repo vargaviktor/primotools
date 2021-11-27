@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="3">
+      <Unit0>
+        <Filename Value="PRI2PTP.PAS"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="pri2ptp"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="259"/>
+        <CursorPos X="62" Y="261"/>
+        <UsageCount Value="262"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="PTP2PRI.PAS"/>
+        <UnitName Value="ptp2pri"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="230"/>
+        <CursorPos X="42" Y="262"/>
+        <UsageCount Value="131"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="CRCPRIMO.PAS"/>
+        <UnitName Value="crcprimo"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="333"/>
+        <CursorPos X="56" Y="352"/>
+        <UsageCount Value="131"/>
+      </Unit2>
+    </Units>
+    <JumpHistory Count="7" HistoryIndex="6">
+      <Position1>
+        <Filename Value="PRI2PTP.PAS"/>
+        <Caret TopLine="34"/>
+      </Position1>
+      <Position2>
+        <Filename Value="PRI2PTP.PAS"/>
+        <Caret Line="33" Column="27" TopLine="21"/>
+      </Position2>
+      <Position3>
+        <Filename Value="PRI2PTP.PAS"/>
+        <Caret Line="109" Column="34" TopLine="98"/>
+      </Position3>
+      <Position4>
+        <Filename Value="PRI2PTP.PAS"/>
+        <Caret Line="300" Column="29" TopLine="292"/>
+      </Position4>
+      <Position5>
+        <Filename Value="PRI2PTP.PAS"/>
+        <Caret Line="33" Column="27" TopLine="21"/>
+      </Position5>
+      <Position6>
+        <Filename Value="PRI2PTP.PAS"/>
+        <Caret Line="108" Column="34" TopLine="89"/>
+      </Position6>
+      <Position7>
+        <Filename Value="PRI2PTP.PAS"/>
+        <Caret Line="109" Column="34" TopLine="90"/>
+      </Position7>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

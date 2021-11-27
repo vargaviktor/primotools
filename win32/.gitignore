@@ -1,9 +1,5 @@
 *.ow
-*.lpi
-*.lps
-*.ptp
-*.pri
-*.wav
+*.o
 /lib/*
 /backup/*
 

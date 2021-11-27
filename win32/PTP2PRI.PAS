@@ -1,4 +1,4 @@
-program ptp2pri;  { Primo PRI file -> Primo PTP file }
+program PTP2PRI;  { Primo PRI file -> Primo PTP file }
 {Based on the wav2ptp program by joco}
 {Based on the pri22ptp program by Varga Viktor}
 {Programed by Viktor Varga <vargaviktor@pro.hu>}
@@ -109,14 +109,14 @@ repeat {wait for first $ff}
 until getbyte_=$FF;
 Writeln('Tape file header found...');
 
-fsize:=(GetByte_ shl 8)+GetByte_; {get a ptp file size}
+fsize:=GetByte_+(GetByte_ shl 8); {get a ptp file size}
 WriteLn('Tape file size: $',hex(hi(fsize)),hex(lo(fsize)));
 
 repeat
 case Getbyte_ of {get tapeblock type}
 $55: {normal block found}
     begin
-    bsize:=(GetByte_ shl 8)+GetByte_; {get blocksize}
+    bsize:=GetByte_+(GetByte_ shl 8); {get blocksize}
 
     blktype:=Getbyte_; {get blocktype}
     case blktype of
@@ -200,7 +200,7 @@ $55: {normal block found}
              blknum:=Getbyte_; {get block number}
              inc(CRC, blknum);
 
-             tadr:=(GetByte_ shl 8)+GetByte_; {get block load address}
+             tadr:=GetByte_+(GetByte_ shl 8); {get block load address}
              inc(CRC, lo(tadr));
              inc(CRC, hi(tadr));
 
@@ -231,7 +231,7 @@ $AA:
     CRC:=0;
     last:=true; {if the type is $aa this is the last block of this file}
 
-    bsize:=(GetByte_ shl 8)+GetByte_; {get blocksize}
+    bsize:=GetByte_+(GetByte_ shl 8); {get blocksize}
 
     blktype:=Getbyte_; {get blocktype}
 
@@ -259,7 +259,7 @@ $AA:
              blknum:=Getbyte_; {get blocknumber}
              inc(CRC, blknum);
 
-             sadr:=(GetByte_ shl 8)+GetByte_; {get start address}
+             sadr:=GetByte_+(GetByte_ shl 8); {get start address}
              inc(CRC, lo(sadr));
              inc(CRC, hi(sadr));
 

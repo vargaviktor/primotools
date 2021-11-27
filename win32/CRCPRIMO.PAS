@@ -129,8 +129,8 @@ begin
          case blktype of
           $D1,$D5,$D9: { BASIC program/Screen/BASIC-data/Machine-code block }
               begin
-              dadr:=(GetByte_ shl 8)+GetByte_; {get load address}
-              dnob:=(GetByte_ shl 8)+GetByte_; {get bytes of block}
+              dadr:=GetByte_+(GetByte_ shl 8); {get load address}
+              dnob:=GetByte_+(GetByte_ shl 8); {get bytes of block}
 
               case blktype of
                    $D1: s:='BASIC program';
@@ -151,7 +151,7 @@ begin
               end;
           $C3: { machine code end block }
               begin
-              dsadr:=(GetByte_ shl 8)+GetByte_; {get start address}
+              dsadr:=GetByte_+(GetByte_ shl 8); {get start address}
               if long then Write('D - #',hex(bcd(blknum)),'-','End block. ');
               if long then WriteLn('Start address: $',hex(hi(dsadr)),hex(lo(dsadr)),' (',dsadr,')');
               if long then Writeln('D - Raw CRC: ',fCRC);
@@ -207,14 +207,14 @@ repeat
 
       if long then Writeln('T - Tape file header found...');
 
-      fsize:=(GetByte_ shl 8)+GetByte_; {get a ptp file size}
+      fsize:=GetByte_+(GetByte_ shl 8); {get a ptp file size}
       if long then WriteLn('T - Tape file size: $',hex(hi(fsize)),hex(lo(fsize)));
 
       repeat
             case Getbyte_ of {get tapeblock type}
              $55: {normal block found}
                   begin
-                  bsize:=(GetByte_ shl 8)+GetByte_; {get blocksize}
+                  bsize:=GetByte_+(GetByte_ shl 8); {get blocksize}
 
                   blktype:=Getbyte_; {get blocktype}
 
@@ -290,7 +290,7 @@ repeat
                        blknum:=Getbyte_; {get block number}
                        inc(CRC, blknum);
 
-                       tadr:=(GetByte_ shl 8)+GetByte_; {get block load address}
+                       tadr:=GetByte_+(GetByte_ shl 8); {get block load address}
                        inc(CRC, lo(tadr));
                        inc(CRC, hi(tadr));
 
@@ -318,7 +318,7 @@ repeat
                    CRC:=0;
                    lasttf:=true; {if the type is $aa this is the last block of this file}
 
-                   bsize:=(GetByte_ shl 8)+GetByte_; {get blocksize}
+                   bsize:=GetByte_+(GetByte_ shl 8); {get blocksize}
 
                    blktype:=Getbyte_; {get blocktype}
 
@@ -349,7 +349,7 @@ repeat
                            blknum:=Getbyte_; {get blocknumber}
                            inc(CRC, blknum);
 
-                           sadr:=(GetByte_ shl 8)+GetByte_; {get start address}
+                           sadr:=GetByte_+(GetByte_ shl 8); {get start address}
                            inc(CRC, lo(sadr));
                            inc(CRC, hi(sadr));
 

@@ -105,8 +105,8 @@ blktype:=GetByte_; {block type reading}
 case blktype of
 $D1,$D5,$D9: { BASIC program/Screen/BASIC-data/Machine-code block }
      begin
-     dadr:=(GetByte_ shl 8)+GetByte_; {get load address}
-     dnob:=(GetByte_ shl 8)+GetByte_; {get bytes of block}
+     dadr:=GetByte_+(GetByte_ shl 8); {get load address}
+     dnob:=GetByte_+(GetByte_ shl 8); {get bytes of block}
 
      case blktype of {check block type for printing}
           $D1: s:='BASIC program';
@@ -275,7 +275,7 @@ $D1,$D5,$D9: { BASIC program/Screen/BASIC-data/Machine-code block }
      Store(bcd(blknum));   {store block number}
      inc(CRC,bcd(blknum));
 
-     dsadr:=(GetByte_ shl 8)+GetByte_; {get start address}
+     dsadr:=GetByte_+(GetByte_ shl 8); {get start address}
      StoreWord(dsadr);                 {store start adress}
      inc(CRC,lo(dsadr));
      inc(CRC,hi(dsadr));
