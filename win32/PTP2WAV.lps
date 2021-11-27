@@ -6,11 +6,10 @@
     <BuildModes Active="Default"/>
     <Units Count="1">
       <Unit0>
-        <Filename Value="CRCPRIMO.PAS"/>
+        <Filename Value="PTP2WAV.PAS"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="crcprimo"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="10" Y="9"/>
+        <TopLine Value="67"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>

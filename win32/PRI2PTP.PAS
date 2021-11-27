@@ -2,9 +2,9 @@ program pri2ptp;  { Primo PRI file -> Primo PTP file }
 {Based on the wav2ptp program by joco}
 {Programed by Viktor Varga <vargaviktor@pro.hu>}
 {The program and source is free.}
-{1.0 version , this is OK now.}
+{1.1 version , this is OK now.}
 
-uses crt;
+{uses crt;}
 var
       f : file;
      fo : file;

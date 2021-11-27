@@ -1,20 +1,19 @@
 TODO:
 -----
 Crcprimo
--Kevés fájlal használható (max 2 fájl egyszerre), 3-nál már -l esetén runtime error 216 van 
--1-1 fájlnál tudja -l nél a blokkokat rendesen listázni
--szöveg kimenet fájlba irányítása nem megy
+-l nél a blokkokat rendesen listázni nem tudja 
+-- ez utóbbi el rontva, vissza kell állni korábbra tape esetében, és megnézni a 100-nál nagyobb BCD-t Disk esetében
+
 
 Pri2ptp
--szöveg kimenet fájlba irányítása nem megy
-(az eltérések a file névből szoktak adódni az ptp2pri->pri2ptp sorozatos konvertáláskor, az nem hiba)
+nincs (az eltérések a file névből szoktak adódni az ptp2pri->pri2ptp sorozatos oda vissza konvertáláskor, az nem hiba)
 
 Ptp2pri
--szöveg kimenet fájlba irányítása nem megy
--fura blokk számozás konvertáláskor
+-fura blokk számozás konvertáláskor, de jó ez így, minta lehet crc primo javításhoz
 
 ptp2wav,wav2ptp
-odakonv sikeres
+odakonv sikeresnek látszik, visszakonv bit rára váltás során hibát ad, nem tudni melyik rossz
+
 
 c:\Users\Viktor\DEV\primotools\win32>ptp2wav oszkar_a_lovag.ptp oszkar_alo.wav
 FILE write, size=17829

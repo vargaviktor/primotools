@@ -9,12 +9,34 @@
         <Filename Value="PTP2PRI.PAS"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="67"/>
+        <TopLine Value="214"/>
+        <CursorPos X="51" Y="225"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit0>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="5" HistoryIndex="4">
+      <Position1>
+        <Filename Value="PTP2PRI.PAS"/>
+        <Caret Line="273" Column="27" TopLine="266"/>
+      </Position1>
+      <Position2>
+        <Filename Value="PTP2PRI.PAS"/>
+        <Caret Line="225" Column="27" TopLine="214"/>
+      </Position2>
+      <Position3>
+        <Filename Value="PTP2PRI.PAS"/>
+        <Caret Line="252" Column="27" TopLine="233"/>
+      </Position3>
+      <Position4>
+        <Filename Value="PTP2PRI.PAS"/>
+        <Caret Line="273" Column="27" TopLine="254"/>
+      </Position4>
+      <Position5>
+        <Filename Value="PTP2PRI.PAS"/>
+        <Caret Line="225" Column="48" TopLine="214"/>
+      </Position5>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes Count="0" ActiveMode=""/>

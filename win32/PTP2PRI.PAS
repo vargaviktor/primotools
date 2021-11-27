@@ -3,9 +3,9 @@ program PTP2PRI;  { Primo PRI file -> Primo PTP file }
 {Based on the pri22ptp program by Varga Viktor}
 {Programed by Viktor Varga <vargaviktor@pro.hu>}
 {The program and source is free.}
-{1.0 version, working OK, checked}
+{1.1 version, working OK, checked}
 
-uses crt;
+{uses crt;}
 var
       f : file;
      fo : file;

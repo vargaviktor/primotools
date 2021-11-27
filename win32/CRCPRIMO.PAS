@@ -6,7 +6,7 @@ program crcprimo;  { Creating a raw CRC from a PRI or a PTP file }
 {The program and source is free.}
 { -s parameter nem mukodik tape file eseteben rt100}
 
-uses crt;
+{uses crt;}
 var
       f : file;
      fo : file;
@@ -271,7 +271,7 @@ repeat
                        {print the filenames}
                        if long then Writeln('T - Primo file found: ',fname,' in ',inf);
 
-                       if (lo(CRC)<>Getbyte_) then Writeln('T - CRC error in the ',inf,'/',fname,' at block #',hex(blknum));
+                       if (lo(CRC)<>Getbyte_) then Writeln('T - CRC error in the ',inf,'/',fname,' at block #',bcd(blknum));
                        {if the CRC in the file not equal with the calculated there was error.}
                        end;{83,87 end}
 
@@ -307,8 +307,8 @@ repeat
                            inc(fCRC,b);
                            end;
 
-                       if (lo(CRC)<>Getbyte_) then Writeln('T - CRC error in the ',inf,'/',fname,' at block #',hex(blknum));
-                       if long then WriteLn('T - #',hex(blknum),'-',s);
+                       if (lo(CRC)<>Getbyte_) then Writeln('T - CRC error in the ',inf,'/',fname,' at block #',bcd(blknum));
+                       if long then WriteLn('T - #',hex(bcd(blknum)),'-',s);
                        end;{Fx end}
                   end; {case 83 fx begin endje}
                   end; {case 55 endje}
@@ -334,7 +334,7 @@ repeat
 
                            {if the CRC in the file not equal with the calculated there was error.}
 
-                           if long then Write('T - #',hex(blknum),'-','End block. ');
+                           if long then Write('T - #',hex(bcd(blknum)),'-','End block. ');
                            if long then WriteLn('Start address: BASIC');
                            if long then Writeln('T - Raw CRC: ',fCRC);
 
@@ -358,7 +358,7 @@ repeat
 
                            prisad[CVTfiles]:=sadr;
 
-                           if long then Write('T - #',hex(blknum),'-','End block. ');
+                           if long then Write('T - #',hex(bcd(blknum)),'-','End block. ');
                            if long then Writeln('Start address: $',hex(hi(sadr)),hex(lo(sadr)),' (',sadr,')');
                            if long then Writeln('T - Raw CRC: ',fCRC);
 

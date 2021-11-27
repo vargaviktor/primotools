@@ -8,10 +8,11 @@
         <MainUnitHasCreateFormStatements Value="False"/>
         <MainUnitHasTitleStatement Value="False"/>
         <MainUnitHasScaledStatement Value="False"/>
+        <UseDefaultCompilerOptions Value="True"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="CRCPRIMO"/>
+      <Title Value="PTP2WAV"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -28,9 +29,8 @@
     </RunParams>
     <Units Count="1">
       <Unit0>
-        <Filename Value="CRCPRIMO.PAS"/>
+        <Filename Value="PTP2WAV.PAS"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="crcprimo"/>
       </Unit0>
     </Units>
   </ProjectOptions>
@@ -38,7 +38,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="CRCPRIMO"/>
+      <Filename Value="PTP2WAV"/>
     </Target>
     <SearchPaths>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
