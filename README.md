@@ -98,3 +98,7 @@ Thanks
 ------
 PTP2WAV and WAV2PTP are made by Laszlo Jozsef
 others based on code of Laszlo Jozsef
+
+Note
+------
+The DOS version were not bugfixed, they are here as archival reason. Use the win32 instead.
